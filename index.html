@@ -12,23 +12,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-    #gifblk {
+    #gifDiv {
         float: left;
     }
-    
+    .col-md-9 {
+        float: left;
+        margin-top: 50px;
+    }
+    .form {
+        float: right;
+    }
+    #giftainer {
+     /* color? */
+    }
+
+
     </style>
     
 </head>
     <body>
+
         <!-- Navbar -->
         <div id="navbar" class="navbar">
-            <div class="nav-left"><h2>Giphy Maker</h2></div>
-            <div class="nav-right">
-                <form>
-                    <input id="new-topic" type="text">
-                    <button type="submit" id="button-input">Add button</button>
-                </form>
-            </div> 
+            <div class="nav-left"><h2>Giphy API</h2></div>
+            <div class="nav-right"></div> 
             <hr>
             <div id="btn-row">
                 <button type="submit"></button>
@@ -38,9 +45,15 @@
         <!-- Main Content -->
     
         <div class="container">
-           
+            <div class="form">
+                <form>
+                    <input id="new-topic" type="text">
+                    <button type="submit" id="button-input">Add button</button>
+                </form>
+            </div>
+            <!-- <div class="row"> -->
                 <div id="giftainer"></div>
-                    
+            <!-- </div> -->
         </div>
 
 
@@ -115,8 +128,10 @@ $(document).on("click", ".button", function(){
             gifImg.attr("data-animate", movingLink);
             gifImg.attr('data-still', stillLink);
 
-            gifDiv.append(gifImg);
+            
             gifDiv.append(p);
+            gifDiv.append(gifImg);
+           
             giftainer.prepend(gifDiv);                
 
         }

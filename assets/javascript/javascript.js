@@ -1,6 +1,6 @@
    
 // Button Topics
-var topics = ["simpsons", "thad castle", "catbug", "puppycat", "bread cat", "bruce lee"];
+var topics = ["simpsons", "thad castle", "catbug", "puppycat", "bread cat", "bruce lee", "this is a very boring layout"];
 
 // Create buttons for values in array
 var createButton = function() {
